@@ -1,0 +1,13 @@
+<h1> Rock Paper Scissor </h1>
+<div class="images">
+  <%=image_tag("rock.jpg", alt: "Rails", class: "img-circle", onclick: 'test') %>
+  <button name="rock" type="button" class="btn btn-primary", action='controller/game_controller'>Rock</button>
+  <%=image_tag("paper.jpg", alt: "Rails", class: "img-circle") %>
+  <button name="paper" type="button" class="btn btn-primary">Paper</button>
+  <%=image_tag("scissor.jpg", alt: "Rails",class: "img-circle") %>
+  <button name="scissor" type="button" class="btn btn-primary">Scissor</button>
+</div>
+
+<div id ='win'>
+  <%= render 'shared/youwon' %>
+</div>

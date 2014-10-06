@@ -1,0 +1,20 @@
+<h1> Rock Paper Scissor </h1>
+    <div class="images">
+      <%=image_tag("rock.jpg", alt: "Rails", class: "img-circle", onclick: 'test') %>
+      <button type="button" class="btn btn-primary", onclick: 'sum_fn'>Rock</button>
+        <%= javascript_tag do %>
+    function sum_fn() {
+        /* Assuming you have jQuery */
+        $.post('/ajax/sum.json', {
+             num1: 100,
+             num2: 50
+        }, function(data) {
+             var output = data.result;
+             /* output should be 150 if successful */
+        }
+    }
+      <%=image_tag("paper.jpg", alt: "Rails", class: "img-circle") %>
+      <button type="button" class="btn btn-primary">Paper</button>
+      <%=image_tag("scissor.jpg", alt: "Rails",class: "img-circle") %>
+      <button type="button" class="btn btn-primary">Scissor</button>
+   </div>
